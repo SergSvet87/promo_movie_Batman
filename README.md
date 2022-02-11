@@ -1,1 +1,1 @@
-# promo_movie_Batman
+# promo_movie_Batman - учебный проект о верстке

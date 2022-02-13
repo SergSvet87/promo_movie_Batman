@@ -8,15 +8,53 @@
   outline: none;
 }
 
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto/');
+  src: local('Roboto'), local('Roboto-Regular'),
+      url('../fonts/Roboto/?#iefix') format('embedded-opentype'),
+      url('../fonts/Roboto/Roboto-Regular.woff') format('woff'),
+      url('../fonts/Roboto/Roboto-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Museo Sans Cyrl 700";
+  src: url("../fonts/Museo/MuseoSansCyrl-700.eot");
+  src: local("../fonts/MuseoSansCyrl-700"),
+    url("../fonts/Museo/MuseoSansCyrl-700.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Museo/MuseoSansCyrl-700.woff") format("woff"),
+    url("../fonts/Museo/") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 html,
 body {
   font-size: 62.5%; /* Сброс шрифта к 10рх */
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  color: #ffffff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
 }
 
 /* Header start */
 .header {
-  padding-top: 6.4rem;
+  position: absolute;
   padding-bottom: 6.4rem;
+  left: 50%;
+  top: 6.4rem;
+  transform: translate(-50%, 0);
 }
 
 .container {
@@ -47,6 +85,8 @@ body {
 }
 
 .header__nav a {
+  font-size: 1.4rem;
+  line-height: 114%;
   color: #ffffff;
   text-decoration: none;
 }
@@ -65,9 +105,79 @@ body {
 
 /* Header end */
 
-body {
+/* Основной контент начало */
+.main {
+  padding-top: 18.7rem;
   background: url("../images/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: top;
 }
+
+.main__rating-title {
+  font-size: 1.4rem;
+  line-height: 16px;
+  margin-bottom: 1.6rem;
+}
+
+.main__rating-wrap {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.main__rating-stars {
+  display: flex;
+  align-items: center;
+  margin-right: 0.9rem;
+}
+
+.main__rating-star {
+  width: 1.2rem;
+  height: 1.2rem;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.main__rating-star:not(:last-child) {
+  margin-right: 0.4rem;
+}
+
+.main__rating-number {
+  font-size: 1.2rem;
+  line-height: 117%;
+}
+
+.main__header {
+  font-family: Museo Sans Cyrl;
+  font-size: 7.6rem;
+  line-height: 120%;
+}
+
+.main__description {
+  max-width: 52.8rem;
+  margin-bottom: 4.1rem;
+  font-size: 1.4rem;
+  line-height: 150%;
+}
+
+.main__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 24.5rem;
+  height: 6rem;
+  padding: 2.2rem 7.2rem;
+  margin-bottom: 8.8rem;
+  background-color: #151515;
+  border-radius: 0.8rem;
+  font-size: 1.4rem;
+  line-height: 114%;
+  color: #ffffff;
+  text-decoration: none;
+}
+/* Основной контент конец */
 
 /* Footer start */
 .footer {
@@ -86,7 +196,6 @@ body {
 .footer__menu {
   display: flex;
   padding-left: 0;
-  color: #ffffff;
 }
 
 .footer__menu li {
@@ -94,12 +203,20 @@ body {
 }
 
 .footer__menu li a {
-  color: #ffffff;
+  font-size: 1.4rem;
+  line-height: 143%;
+  color: #686767;
   text-decoration: none;
 }
 
-.footer__menu li:not(:last-child){
+.footer__menu li:not(:last-child) {
   margin-right: 2.5rem;
+}
+
+.footer_copy {
+  font-size: 1.4rem;
+  line-height: 143%;
+  color: #686767;
 }
 
 /* Footer end */
